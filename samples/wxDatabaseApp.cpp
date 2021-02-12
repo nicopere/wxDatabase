@@ -40,7 +40,7 @@ int wxDatabaseApp::OnRun()
 		// simply comment in one of the GetDatabase() calls below
 
 		// use the wxDatabaseApp.conf file
-		//pDatabase = GetDatabase();
+		pDatabase = GetDatabase();
 		
 		// SQLite3 direct
 		//pDatabase = GetDatabase("[SQLite]\ndatabase=C:/wxDev/sqlite/test.sqlite");
@@ -61,7 +61,7 @@ int wxDatabaseApp::OnRun()
 //	instance = sqlexpress
 //#	port = 1433
 // instance and port are mutually exclusive
-		pDatabase = GetDatabase("[TDS]\nfreetds=C:/wxDev/freetds-1.00.24/freetds.conf\nserver=manyleaves_sqlexpress\ndatabase=test\nuser=\npassword=\nversion=7.1");
+		//pDatabase = GetDatabase("[TDS]\nfreetds=C:/wxDev/freetds-1.00.24/freetds.conf\nserver=manyleaves_sqlexpress\ndatabase=test\nuser=\npassword=\nversion=7.1");
 	
 		// TDS via ODBC
 		//pDatabase = GetDatabase("[ODBC]\nConnection=DRIVER=SQL Server;SERVER=manyleaves\\\\sqlexpress;TRUSTED_CONNECTION=Yes;DATABASE=test\nDSN=\nDbType=TDS\n");
