@@ -50,13 +50,22 @@ void wxMysqlPreparedStatement::AddPreparedStatement(MYSQL_STMT* pStatement)
   m_Statements.push_back(pStatementWrapper);
 }
 
-// get field
+// set field
 void wxMysqlPreparedStatement::SetParamInt(int nPosition, int nValue)
 {
   int nIndex = FindStatementAndAdjustPositionIndex(&nPosition);
   if (nIndex > -1)
   {
     m_Statements[nIndex]->SetParam(nPosition, nValue);
+  }
+}
+
+void wxMysqlPreparedStatement::SetParamLong(int nPosition, long lnValue)
+{
+  int nIndex = FindStatementAndAdjustPositionIndex(&nPosition);
+  if (nIndex > -1)
+  {
+    m_Statements[nIndex]->SetParam(nPosition, lnValue);
   }
 }
 

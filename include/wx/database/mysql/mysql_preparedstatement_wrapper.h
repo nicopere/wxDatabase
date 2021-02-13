@@ -19,6 +19,7 @@ public:
 
   // set field
   void SetParam(int nPosition, int nValue);
+  void SetParam(int nPosition, long lnValue);
   void SetParam(int nPosition, double dblValue);
   void SetParam(int nPosition, const wxString& strValue);
   void SetParam(int nPosition);

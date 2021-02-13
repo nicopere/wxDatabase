@@ -54,6 +54,13 @@ void wxMysqlPreparedStatementParameterCollection::SetParam(int nPosition, int nV
   SetParam(nPosition, pParameter);
 }
 
+void wxMysqlPreparedStatementParameterCollection::SetParam(int nPosition, long lnValue)
+{
+  wxMysqlParameter* pParameter = new wxMysqlParameter(lnValue);
+  pParameter->SetEncoding(GetEncoding());
+  SetParam(nPosition, pParameter);
+}
+
 void wxMysqlPreparedStatementParameterCollection::SetParam(int nPosition, double dblValue)
 {
   //MysqlParameter Parameter(dblValue);

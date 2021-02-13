@@ -24,6 +24,7 @@ public:
   
   // get field
   virtual void SetParamInt(int nPosition, int nValue);
+  virtual void SetParamLong(int nPosition, long lnValue);
   virtual void SetParamDouble(int nPosition, double dblValue);
   virtual void SetParamString(int nPosition, const wxString& strValue);
   virtual void SetParamNull(int nPosition);

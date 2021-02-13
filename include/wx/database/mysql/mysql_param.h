@@ -10,6 +10,7 @@ public:
   wxMysqlParameter();
   wxMysqlParameter(const wxString& strValue);
   wxMysqlParameter(int nValue);
+  wxMysqlParameter(long lnValue);
   wxMysqlParameter(double dblValue);
   wxMysqlParameter(bool bValue);
   wxMysqlParameter(const wxDateTime& dateValue);
@@ -21,6 +22,7 @@ public:
   enum {
     PARAM_STRING = 0,
     PARAM_INT,
+    PARAM_LONG,
     PARAM_DOUBLE,
     PARAM_DATETIME,
     PARAM_BOOL,
@@ -42,6 +44,7 @@ private:
   // A union would probably be better here
   wxString m_strValue;
   int m_nValue;
+  long m_lnValue;
   double m_dblValue;
   MYSQL_TIME* m_pDate;
   bool m_bValue;

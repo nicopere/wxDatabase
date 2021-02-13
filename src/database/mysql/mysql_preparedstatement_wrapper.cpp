@@ -29,6 +29,11 @@ void wxMysqlPreparedStatementWrapper::SetParam(int nPosition, int nValue)
   m_Parameters.SetParam(nPosition, nValue);
 }
 
+void wxMysqlPreparedStatementWrapper::SetParam(int nPosition, long lnValue)
+{
+  m_Parameters.SetParam(nPosition, lnValue);
+}
+
 void wxMysqlPreparedStatementWrapper::SetParam(int nPosition, double dblValue)
 {
   m_Parameters.SetParam(nPosition, dblValue);

@@ -30,6 +30,12 @@ wxMysqlParameter::wxMysqlParameter(int nValue)
   //m_strValue = wxString::Format(_("%d"), nValue);
 }
 
+wxMysqlParameter::wxMysqlParameter(long lnValue)
+{
+  m_nParameterType = wxMysqlParameter::PARAM_LONG;
+  m_lnValue = lnValue;
+}
+
 wxMysqlParameter::wxMysqlParameter(double dblValue)
 {
   m_nParameterType = wxMysqlParameter::PARAM_DOUBLE;
@@ -101,6 +107,9 @@ const void* wxMysqlParameter::GetDataPtr()
     case wxMysqlParameter::PARAM_INT:
       pReturn = &m_nValue;
       break;
+    case wxMysqlParameter::PARAM_LONG:
+      pReturn = &m_lnValue;
+      break;
     case wxMysqlParameter::PARAM_DOUBLE:
       pReturn = &m_dblValue;
       break;
@@ -138,6 +147,7 @@ enum_field_types wxMysqlParameter::GetBufferType()
       returnType = MYSQL_TYPE_VAR_STRING;
       break;
     case wxMysqlParameter::PARAM_INT:
+    case wxMysqlParameter::PARAM_LONG:
       returnType = MYSQL_TYPE_LONG;
       break;
     case wxMysqlParameter::PARAM_DOUBLE:

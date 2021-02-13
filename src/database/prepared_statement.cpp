@@ -55,4 +55,7 @@ void wxPreparedStatement::SetParamBlob(int nPosition, const wxMemoryBuffer& buff
   SetParamBlob(nPosition, buffer.GetData(), buffer.GetBufSize());
 }
 
-
+void wxPreparedStatement::SetParamLong(int nPosition, long lnValue) {
+  // nothing: silently ignore requests from daughter classes which do not redefine it
+  // (currently implemented for mysql only)
+}

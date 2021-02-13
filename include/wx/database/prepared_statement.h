@@ -20,6 +20,8 @@ public:
   // set parameters
   /// Set the parameter at the 1-based position to an int value
   virtual void SetParamInt(int nPosition, int nValue) = 0;
+  /// Set the parameter at the 1-based position to an long int value
+  virtual void SetParamLong(int nPosition, long lnValue);
   /// Set the parameter at the 1-based position to a double value
   virtual void SetParamDouble(int nPosition, double dblValue) = 0;
   /// Set the parameter at the 1-based position to a wxString value
