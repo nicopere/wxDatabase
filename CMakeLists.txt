@@ -20,7 +20,6 @@ set (wxDATABASE_VERSION_MINOR 0)
  
 #Set Options 
 option (ENABLE_MYSQL "Enable MariaDB and MYSQL Database" ON) 
-set(MYSQL_LIB_DIR ${MYSQL_LIB_DIR} "/usr/lib/x86_64-linux-gnu/")
 option (ENABLE_SQLITE "Enable SQLite3 Database" ON) 
 option (ENABLE_PGS "Enable PostGreSQL Database" OFF) 
 option (ENABLE_TDS "Enable MSSQL Access with TDS Database" OFF) 
